@@ -1,4 +1,4 @@
-FROM kuzmenkov/shinybase:latest
+FROM kuzmenkov/shinyrbase:latest
 
 
 # basic shiny functionality
@@ -60,9 +60,9 @@ RUN R -e "install.packages('shinyBS', repos='https://cran.r-project.org/')" \
 
 
 #volume for Shiny Apps and static assets. Here is the folder for index.html(link) and sample apps.
-VOLUME /srv/shiny-server
+VOLUME /home/docker
 EXPOSE 3838
 
 
 
-CMD ["/sbin/my_init"]
+CMD ["R", "-e shiny::runApp('/home/docker')"]
