@@ -1,6 +1,5 @@
 FROM kuzmenkov/shinyrbase:latest
 
-
 # basic shiny functionality
 RUN R -e "install.packages('shinyBS', repos='https://cran.r-project.org/')" \
 #&& sudo su - -c "R -e \"options(unzip = 'internal'); devtools::install_version('highcharter', version = '0.5.0', repos = 'https://cran.r-project.org/')\"" \
