@@ -57,8 +57,6 @@ RUN R -e "install.packages('shinyBS', repos='https://cran.r-project.org/')" \
 && R -e "install.packages('RcppTOML', repos='https://cran.r-project.org/')" \
 && R -e "install.packages('configr', repos='https://cran.r-project.org/')"
 
-
-
 #volume for Shiny Apps and static assets. Here is the folder for index.html(link) and sample apps.
 VOLUME /home/docker
 EXPOSE 3838
