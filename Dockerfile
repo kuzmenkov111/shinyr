@@ -61,4 +61,4 @@ RUN R -e "install.packages('shinyBS', repos='https://cran.r-project.org/')" \
 VOLUME /home/docker
 EXPOSE 3838
 
-CMD ["R", "-e shiny::runApp('/home/docker', port = 3838, host = '0.0.0.0')"]
+CMD ["R", "-e shiny::runApp('/home/docker', port=3838, host='0.0.0.0')"]
